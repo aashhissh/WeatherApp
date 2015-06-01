@@ -1,0 +1,538 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.ashish.leftshiftchallenge.CityWeatherForecastActivity">
+
+    <LinearLayout
+        android:id="@+id/llCityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textSize="23sp"
+            android:gravity="center"
+            android:textColor="#ff1d5dba"
+            android:textStyle="bold|italic"
+            android:text="Udaipur,IN"
+            android:id="@+id/tvCityName" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llTop"
+        android:layout_below="@+id/llCityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:layout_weight="80"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivWeather"
+                        android:layout_weight="70"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/a01d"/>
+
+                    <LinearLayout
+                        android:layout_weight="30"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llTempMin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Min"
+                                android:textColor="#FFFFFF"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:background="#ff90be24"/>
+
+                            <TextView
+                                android:id="@+id/tvMinTemprature"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textColor="#ff4425a0"
+                                android:gravity="center"
+                                android:textSize="25sp"
+                                android:text="20"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="\u2103"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llMaxTemp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Max"
+                                android:textColor="#FFFFFF"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:background="#ffbe4912"/>
+
+                            <TextView
+                                android:id="@+id/tvMaxTemprature"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="35"
+                                android:textStyle="bold"
+                                android:textColor="#ff4425a0"
+                                android:gravity="center"
+                                android:textSize="25sp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="\u2103"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="1/1/2015"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:padding="2dp"
+                    android:id="@+id/tvDate" />
+
+                <TextView
+                    android:id="@+id/tvMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Clear"
+                    android:textSize="25sp"
+                    android:textStyle="bold|italic"
+                    android:textColor="#ff0db2ff"
+                    android:padding="2dp"/>
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Sky is Clear"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:textColor="#ff64468b"
+                    android:padding="2dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llMorning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Morn"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:background="#ff6566d7"/>
+
+                    <TextView
+                        android:id="@+id/tvMorning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="28"
+                        android:textStyle="bold"
+                        android:textColor="#ff4425a0"
+                        android:gravity="center"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="\u2103"
+                        android:textSize="11sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Day"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:background="#ff90be24"/>
+
+                    <TextView
+                        android:id="@+id/tvDay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="32"
+                        android:textStyle="bold"
+                        android:textColor="#ff4425a0"
+                        android:gravity="center"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="\u2103"
+                        android:textSize="11sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llEvening"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Eve"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:background="#ff6566d7"/>
+
+                    <TextView
+                        android:id="@+id/tvEvening"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="29"
+                        android:textStyle="bold"
+                        android:textColor="#ff4425a0"
+                        android:gravity="center"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="\u2103"
+                        android:textSize="11sp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llNight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/border">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nit"
+                        android:textColor="#FFFFFF"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:background="#ff90be24"/>
+
+                    <TextView
+                        android:id="@+id/tvNight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:textStyle="bold"
+                        android:textColor="#ff4425a0"
+                        android:gravity="center"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="\u2103"
+                        android:textSize="11sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llExtra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <LinearLayout
+                android:id="@+id/llPressure"
+                android:layout_weight="20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pressure"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="#ff6566d7"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/tvPressure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="421.65"
+                    android:textStyle="bold"
+                    android:textColor="#ff4425a0"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:singleLine="true"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="hpa"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llHumidity"
+                android:layout_weight="20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Humidity"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="#ffd7a8b0"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/tvHumidity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="20"
+                    android:textStyle="bold"
+                    android:textColor="#ff4425a0"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="%"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llWind"
+                android:layout_weight="20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wind"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="#ff6566d7"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/tvWind"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textStyle="bold"
+                    android:textColor="#ff4425a0"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="m/s"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llDegree"
+                android:layout_weight="20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Degree"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="#ffd7a8b0"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/tvDegree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="180"
+                    android:textStyle="bold"
+                    android:textColor="#ff4425a0"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\u00B0"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llClouds"
+                android:layout_weight="20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Clouds"
+                    android:textColor="#FFFFFF"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:background="#ff6566d7"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/tvClouds"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textStyle="bold"
+                    android:textColor="#ff4425a0"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="%"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/llTop"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <org.lucasr.twowayview.TwoWayView
+            android:id="@+id/listView"
+            style="@style/TwoWayView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="false" />
+
+    </LinearLayout>
+
+</RelativeLayout>

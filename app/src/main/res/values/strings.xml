@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LeftShiftChallenge</string>
+<string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+        <string name="title_activity_city_weather_snippet">CityWeatherSnippetActivity</string>
+        <string name="title_activity_city_weather_forecast">CityWeatherForecastActivity</string>
+</resources>

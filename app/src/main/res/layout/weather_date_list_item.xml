@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:id="@+id/list_item">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:src="@drawable/a01d"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:id="@+id/ivItemWeather" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/1/2015"
+            android:background="#ff1d5dba"
+            android:textColor="#FFFFFF"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:id="@+id/tvItemDate" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="100"
+    android:background="#FFFFFF"
+    android:padding="5dp"
+    android:layout_marginTop="3dp">
+
+    <LinearLayout
+        android:id="@+id/llLeftParent"
+        android:layout_weight="30"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivWeather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/a01d"/>
+
+        <LinearLayout
+            android:id="@+id/llLeftBottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:id="@+id/tvTemprature"
+                android:layout_weight="50"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="38 \u2103"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#ff3a3a3a"/>
+
+            <LinearLayout
+                android:layout_weight="50"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvMinTemprature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="20 \u2103"
+                    android:gravity="center"
+                    android:textStyle="italic"
+                    android:textColor="#ffa5d50a"/>
+
+                <TextView
+                    android:id="@+id/tvMaxTemprature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="35 \u2103"
+                    android:gravity="center"
+                    android:textStyle="italic"
+                    android:textColor="#ffc69513"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llRightParent"
+        android:layout_weight="70"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tvCityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Udaipur,IN"
+            android:textStyle="bold|italic"
+            android:textSize="18sp"
+            android:textColor="#ffa2283f"/>
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sky is Clear"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#ff3d2b92"/>
+
+        <LinearLayout
+            android:id="@+id/llRightBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:padding="3dp">
+
+            <TextView
+                android:id="@+id/tvWind"
+                android:layout_weight="50"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Wind : 7.76 m/s"
+                android:textColor="#ff0b81d3"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/tvPressure"
+                android:layout_weight="50"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Press : 947.10hpa"
+                android:textColor="#ff0b81d3"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRightBottomm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:padding="3dp">
+
+            <TextView
+                android:id="@+id/tvCloud"
+                android:layout_weight="50"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cloud : 10 %"
+                android:textColor="#ff0b81d3"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/tvHumidity"
+                android:layout_weight="50"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="humidity : 30 %"
+                android:textColor="#ff0b81d3"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

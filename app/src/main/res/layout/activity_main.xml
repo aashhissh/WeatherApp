@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <AutoCompleteTextView
+            android:layout_weight="90"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/autocomplete"
+            android:hint="Type in your Location" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_weight="10"
+            android:layout_width="25dp"
+            android:layout_height="35dp"
+            android:id="@+id/mLoadingIndicator"
+            android:visibility="gone"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_below="@+id/llTop"
+        android:id="@+id/btFinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ok, That's it."/>
+
+</RelativeLayout>
